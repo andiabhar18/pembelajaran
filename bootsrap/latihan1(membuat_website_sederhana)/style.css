@@ -1,0 +1,174 @@
+html {
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 40px;
+    margin-bottom: 100px;
+    scroll-behavior: smooth;
+
+}
+
+.jumbotron {
+    height: 500px;
+    background-image: url(img/jumbotron-bg.jpg);
+    background-attachment: fixed ;
+    background-size: cover;
+    background-position: 0px -25px;
+    filter:drop-shadow( 0 -10px rgba(0, 0, 0, 0.5));
+    overflow: hidden;
+}
+
+.filter-black {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    top : 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: -1;
+}
+.jumbotron h1, .jumbotron p {
+    text-shadow: 1px 0px 5px rgba(0, 0, 0, 1) ;
+    color: #ffffff;
+    z-index: 100;
+}
+.jumbotron img {
+    width: 200px;
+    border: 5px solid #dbdbdb;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 1) ;
+
+}
+hr {
+    width: 250px;
+    border-top: 3px solid #666;
+}
+section {
+    min-height: 600px;
+}
+
+.pKiri, .pKanan, .pBawah  {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1s;
+}
+.pKanan {
+    transform: translate(50px, 0);
+}
+.pBawah {
+    transform: translate(0, 50px);
+}
+
+.pKiri.pMuncul, .pKanan.pMuncul, .pBawah.pMuncul {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.portfolio {
+    background-color: #eee;
+    min-height: 600px;
+}
+
+.portfolio .thumbnail {
+    opacity: 0;
+    transform: translate(-40px, 0px);
+}
+
+.portfolio .thumbnail.muncul {
+    opacity: 1;
+    transition: .5s;
+    transform: translate(0px, 0px);
+
+}
+section.about .col-sm-10 p {
+    margin-top: 20px;
+}
+
+.portfolio img {
+    width: 300px;
+    height: auto;
+}
+
+.btn-primary {
+    border-radius: 5px;
+}
+
+section.contact {
+    min-height: 750px;
+}
+
+
+
+
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    padding-top: 30px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+
+
+/* overlay */
+.overlay {
+    top: 0;
+    left: 0;
+    width: 0 ;
+    height: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transition: 0.5s;
+    text-align: center;
+    opacity: 0;
+}
+.overlay:target {
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    bottom: 0;
+    right: 0;
+}
+.overlay img {
+    width: 0;
+    height: 0;
+}
+.overlay:target img {
+    height: 100%;
+    width: auto;
+}
+.overlay .close {
+    opacity: 1;
+    position: absolute;
+    margin-top: 5px;
+    border: 1px solid blue;
+    padding: 3px;
+    background-color: white;
+    margin-left: -9999px;
+}
+
+.overlay:target .close {
+    margin-left: 0;
+}
+
+.prev i,
+.next i {
+    font-size: 0px;
+    color: white;
+}
+
+.overlay:target .prev i,
+.overlay:target .next i {
+    font-size: 50px;
+    color: white;
+}

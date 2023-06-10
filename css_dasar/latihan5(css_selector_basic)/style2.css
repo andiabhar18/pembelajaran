@@ -1,0 +1,41 @@
+/* 
+koma(,) artinya dan
+space( ) artinya di dalamnya
+
+tidak disarankan menggunakan id
+  */
+
+
+body{
+    font-family:'Times New Roman', Times, serif ;
+    background-image: url(../latihan4\(css_background\)/image/greengradiantverticalup.jpg);
+    background-repeat: repeat-x;
+}
+
+h1, h2{
+    color: green;
+}
+
+a{
+    color: rgb(252, 0, 218)
+}
+
+ul li a{
+    color: orangered;
+}
+
+#p1{
+    color: yellowgreen;
+}
+
+.p2{
+    color: red;
+}
+
+.cetak-tebal{
+    font-weight: bold;
+}
+
+p.cetak-tebal{
+    font-size: 30px;
+}

@@ -1,0 +1,53 @@
+<!-- 
+pada penulisan border radius memiliki shordlink yakni dimulaim dari sudut kiri atas kemudian searah jarum jam hingga kiri bawah
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border radius</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: salmon;
+            text-align: center;
+            line-height: 300px;
+            display: inline-block;
+        }
+        .satu {
+            border-radius:0 50% 0 50%;
+        }
+        .dua {
+            border-radius: 50% 0;
+        }
+        .tiga {
+            border-radius:  0 50%;
+            background-size: cover;
+            background-image: url(kamu.jpg);
+            background-repeat: no-repeat;
+        }
+        .empat {
+            border-radius: 50% 0;
+            overflow: hidden;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="satu">Hello Word 1</div>
+    <div class="dua">Hello Word 2</div>
+    <div class="tiga">Hello Word 3</div>
+    <div class="empat">
+        <img src="kamu.jpg" alt="">
+    </div>
+</body>
+</html>

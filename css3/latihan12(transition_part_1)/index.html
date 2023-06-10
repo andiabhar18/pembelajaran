@@ -1,0 +1,162 @@
+<!-- 
+Properti transition dapat memungkinkan kita mengubah nilain properti secara halus
+
+jika hnya ada pergerakan awal dan akhir maka dinamakan transition
+dan jika pergerakannya lebih dari 2 maka dianamakan animation
+
+susunan element pada transition (  <>=wajib ada)
+    transition: properti <durasi> fungsi delay;
+
+ macam pengertian
+        *properti
+            memilih properti apa yang ingin diberi transition (tidak berlaku untuk font,-family, display, dan positio{relatif, absolit, dll}). nilai defaultnya adalah all
+        *durasi
+            satuan (s / ms)
+        *funsi (timing fungtion)
+            *ease
+            *ease-in
+            *ease-out
+            *ease-in-out
+            *linear
+            *cubik-bezier (w,x,y,z)
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition</title>
+    <style>
+        body, div{
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+        }
+        #container{
+            width: 500px;
+            border: 3px solid black;
+            background-color: white;
+            margin: 0 auto 10px;
+            position: relative;
+        }
+        #kotak {
+            margin-top:-16px ;
+        }
+        .container1:hover .kotak1 {
+            transform: rotate(180deg);
+            margin-left: 400px;
+            background-color: cyan;
+            transition: 1s;
+        }
+        .container1 .kotak1 {
+            transition: 1s;
+        }
+        .container2:hover .kotak2 {
+            width: 500px;
+            background-color: red;
+            transition: 1s;
+            transform: rotateX(180deg);
+        }
+
+        .container2 .kotak2 {
+            transition: 1s;
+        }
+        .kotak3, .kotak4, .kotak5, .kotak6, .kotak7, .kotak8{
+            background-color: cyan;
+        }
+        .bungkus {
+            width: 500px;
+            margin: auto;
+            height: auto;
+        }
+        .bungkus .kotak3{
+            transition: 1s;
+        }
+        .bungkus .kotak4{
+            transition: all 1s ease-in;
+        }
+        .bungkus .kotak5{
+            transition: all ease-out 1s;
+        }
+        .bungkus .kotak6{
+            transition: all ease-in-out 1s;
+        }
+        .bungkus .kotak7{
+            transition: all linear 1s;
+        }
+        .bungkus .kotak8 {
+            transition: all 1s cubic-bezier(0.88,-0.61, 0.1, 1.51);
+        }
+        .bungkus:hover .kotak3{
+            margin-left: 400px;
+            transition: 1s;
+        }
+        .bungkus:hover .kotak4{
+            margin-left: 400px;
+            transition: all 1s ease-in;
+        }
+        .bungkus:hover .kotak5{
+            margin-left: 400px;
+            transition: all ease-out 1s;
+        }
+        .bungkus:hover .kotak6{
+            margin-left: 400px;
+            transition: all ease-in-out 1s;
+        }
+        .bungkus:hover .kotak7{
+            margin-left: 400px;
+            transition: all linear 1s;
+        }
+        .bungkus:hover .kotak8 {
+            margin-left: 400px;
+            transition: all 1s cubic-bezier(0.88,-0.61, 0.1, 1.51)
+        }
+        .container9:hover .kotak9{
+            margin-left: 400px;
+            transition: 1s 1s ;
+        }
+        .container9 .kotak9{
+            transition: 1s 1s ;
+        }
+    </style>
+ </head>
+ <body>
+    <div id="container" class="container1">
+        <div id="kotak" class="kotak1"><p>1</p></div>
+    </div>
+    <div id="container" class="container2">
+        <div id="kotak" class="kotak2"><p>2</p></div>
+    </div>
+    <div class="bungkus">
+        <div id="container" class="container3">
+            <div id="kotak" class="kotak3"><p>3.ease <br> (defaultnya)</p></div>
+        </div>
+        <div id="container" class="container4">
+            <div id="kotak" class="kotak4"><p>4.ease-in</p></div>
+        </div>
+        <div id="container" class="container5">
+            <div id="kotak" class="kotak5"><p>5.ease-out</p></div>
+        </div>
+        <div id="container" class="container6">
+            <div id="kotak" class="kotak6"><p>6.ease-in-out</p></div>
+        </div>
+        <div id="container" class="container7">
+            <div id="kotak" class="kotak7"><p>7.linear</p></div>
+        </div>
+        <div id="container" class="container8">
+            <div id="kotak" class="kotak8"><p>8.cubic-bezier</p></div>
+        </div>
+    </div>
+    <div id="container" class="container9">
+        <div id="kotak" class="kotak9">
+            <p>9.delay effecf</p>
+        </div>
+    </div>
+ </body>
+ </html>

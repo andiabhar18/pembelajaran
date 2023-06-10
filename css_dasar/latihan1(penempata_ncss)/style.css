@@ -1,0 +1,22 @@
+/* 
+pada tab font memiliki beberapa atribut yakni:
+
+font-family
+    mengatur jenis font yang akan digunakan
+font-size
+    mengatur ukuran font {akhiranya px, %, em}
+font-weight
+    menagtur ketebalan font { lighter, normal, 100-900, bold, bolder }
+font-Variant
+    mengubah font menjadi small caps(semua huruf menjadi huruf besar){small-caps}
+font-style
+    mengubah font menjadi cetak miring { normal, italic, obeliue}
+line-height
+     mengatur spasi antar baris
+*/
+h1 {
+    color: blue;
+    font-family: Arial;
+    font-size: 100px;
+
+}

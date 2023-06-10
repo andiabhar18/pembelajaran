@@ -1,0 +1,151 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-image: url(img/gradient_squares.webp);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* style */
+
+body {
+    background-color: #aeaeae;
+    font: 16px/26px arial, sans-serif;
+    background-image:url(ARL09624.jpg);
+    backdrop-filter: 5px ;
+    background-size: 800px;
+}
+
+.header, .judul, ul li, h2 {
+    text-transform: capitalize;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    background-color: white;
+}
+.header {
+    padding: 20px;
+}
+
+.judul {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 6px 0px 15px;
+}
+
+
+.header ul li  {
+    display: inline-block;
+    margin-right: 20px;
+}
+.header ul li a {
+    color: salmon;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 3px;
+}
+
+.header ul li a:hover {
+    font-size: 25px;
+    color: white;
+    background-color: salmon;
+    border: 1px black solid;
+    border-radius: 10px;
+}
+
+.img {
+    height: 285px;
+    background-color: white;
+    border-top: 2px solid salmon;
+    border-bottom: 2px solid black;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: 0px -415px;
+}
+
+.content-penulis {
+    margin: 20px;
+    height: 40px;
+    border-bottom: rgba(0, 0, 0, 0.80) 1px solid; 
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.penulis {
+    font-size: 15px;
+    margin-top: -5px;
+    margin-bottom: 30px;
+}
+
+.penulis a {
+    color: salmon;
+    text-decoration: none;
+}
+
+.penulis a:hover {
+    color: white;
+    background-color: lightblue;
+}
+
+.content {
+    margin: 20px;    
+}
+
+.content p {
+    margin-bottom: 20px;
+    text-indent: 30px;
+}
+
+.copy {
+    background-color: rgb(34, 34, 34);
+    color: white;
+    text-align: center;
+    padding: 5px;
+}

@@ -1,0 +1,28 @@
+html, body, section {
+  scroll-behavior: smooth;
+}
+
+.jumbotron, .bgb {
+  background-color: #e2edff;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+}
+
+.cap {
+  text-transform: capitalize;
+}
+
+#projects .card img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bgw {
+  padding-top: 2rem;
+}
+section {
+  padding-top: 5rem;
+}

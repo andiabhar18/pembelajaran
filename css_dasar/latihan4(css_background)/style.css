@@ -1,0 +1,40 @@
+/* atribut background memiliki beberapa type yakni:
+1. backround-color
+    menagutur warna pada color
+2. backgroud-image
+    menagtur gambar yang akan digunakan pada background
+3. backgroud-potition
+    mengaturn posisi pada Backgroud
+4. backgroud-repeat
+    mengatur jenis pengulangan pada background
+5. backrount-potition
+    mengatur posisi background(hanya bisa dikombinasikan dengan atribut "backround-repeat" dengan nilai/value "no-repeat")
+
+
+value/nilai yang dimiliki oleh atribut background-repaet
+    1. repeat-x
+    2. repaet-y
+    3. no-repeat
+        (saat menggunakan no-repeat, maka bisa menggunakan atribut "backround-position")
+nilai yang dimiliki oleh atribut backround-position
+    1. terhadap sumbu y= top/center/botton
+    2. terhadap sumbu x= left/center/right
+     */
+
+/*
+body{
+    background-color: white;
+    background-image: url(image/Tree_PNG_Clip_Art-2890.png);
+    background-repeat: no-repeat;
+    background-position:bottom left ;
+}
+*/
+
+/* 
+contoh shorthand/singkatan
+background: color url() position repeat */
+
+
+body{
+    background: url(image/Tree_PNG_Clip_Art-2890.png) aquamarine center bottom no-repeat;
+}

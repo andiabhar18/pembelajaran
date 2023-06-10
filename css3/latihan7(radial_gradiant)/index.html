@@ -1,0 +1,115 @@
+<!-- 
+radial gradian bukanlah properti dari element css melainkan sebuah nilai dari properti backgroud-image
+
+sintaks sederhana yang digunakan oleh radial-gradient
+    background-image: radial-gradient( <warna awal>, <warna akhir>);
+
+sintakts lengkap radial gradient:
+        radial_gradient (
+            <tipe> <jangkauan> at <position-x> <position-y>,
+                <warna-1>,
+                <warna_2>,
+                ...,
+                <warna-n>
+        );
+    macam <tipe>:
+        1.elipse
+        2.circle
+    macam <jangkauan>
+        1.closest-corner
+            jarak dari pusat gradient ke sudut terdekat
+        2.closeset-side
+            jarak dari pusat gradient ke sisi terdekat
+        3.farthest-corner
+            jarak dari pusat gradient ke susut terjauh
+        4. farthest-side
+            jarak dari pusat gradient ke sisi terjauh
+    macam posrition
+        *posisi-x       posisi-y
+            left            top
+            center          center
+            right           bottom
+            px              px
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.satu {
+            width: 600px;
+            height: 300px;
+            background: radial-gradient(
+                circle farthest-side at bottom, black 85%, cyan 90%, white 91%, rgb(106, 255, 255), white,cyan 95%, black
+            );
+            margin: 50px auto;
+        }
+        .satu  {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .satu .hello {
+            position: absolute;
+            bottom: 30px;
+            font: 55px/50px arial;
+            text-transform: capitalize;
+            left: 0;
+            right: 0;
+            bottom: 50px;
+            font-weight: bolder;
+            z-index: 1;
+        }
+
+        .satu p {
+            text-shadow: 0px 0px 10px cyan,
+            0px 0px 5px cyan;
+            border: 1px solid white;
+            margin: 0px 130px;
+            padding: 20px;
+            background-color: black;
+            box-shadow: 0px 0px 10px 3px cyan,
+            inset 0px 0px 10px cyan
+            ;
+        }
+
+        .satu .circle {
+            width: 175px;
+            height: 175px;
+            background-color: black;
+            border-radius: 50% 50% 0 0;
+            position: absolute;
+            left: 210px;
+            top: 100px;
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px 3px cyan,
+            inset 0px 0px 10px 3px cyan;
+        }
+
+        .satu .circle p {
+        margin: 0px;
+        padding: 5px 30px;
+        position: absolute;
+        font-weight: bold;
+        text-transform: uppercase;
+        left: 45px;
+        top: 40px;
+        z-index: 4;
+        
+        }
+    </style>
+ </head>
+ <body>
+    <div class="satu">
+        <div class="circle">
+            <p>sad</p>
+        </div>
+        <div class="hello">
+            <p>andi abhar</p>
+        </div>
+    </div>
+ </body>
+ </html>

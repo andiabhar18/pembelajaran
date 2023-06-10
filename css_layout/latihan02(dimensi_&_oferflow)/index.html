@@ -1,0 +1,72 @@
+<!-- 
+width dan height  memiliki satuan ukuran yakni
+    1. px
+        merupakan satuan absolut( ukuran tidak akan pernah berubah/nilai pasti)
+    2. %
+        merupakan nilai yang relatif( relatif terhadap parent/pembungkusnya)
+    3.in(inci), cm(centi meter), mm(mili meter), pt(poin), pc(poica)
+
+    ada 4 nilai dari properti overflow yakni
+    1. visible
+        value yang merupakan default
+    2. auto
+        otomatis menambahkan scrol ketika tempat tidak cukup
+    3. hidden
+
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dimensi Dan Overflow</title>
+    <style>
+        .satu {
+            width: 200px;
+            background-color:pink;
+            overflow: visible;
+        }
+        .dua {
+            width: 100%;
+            background-color: aqua;
+        }
+
+        div{
+            background-color: green;
+            width: 210px;
+            height: 200px;
+            overflow: auto;
+        }
+
+        .tiga {
+            background-color: red;
+            overflow: hidden;
+        }
+
+        .empat{
+            background-color: rgb(255, 217, 0);
+            overflow: scroll;
+        }
+        .lima {
+            background-color: blueviolet;
+            overflow: scroll;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="satu">
+        hello word
+        <div class="dua">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius deleniti, possimus, officia voluptatum quo saepe optio error magnam necessitatibus magni velit neque ipsam perferendis sapiente consectetur dignissimos nostrum obcaecati explicabo.</div>
+    </div>
+<br>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis impedit eius tempora ducimus error dolores iste perferendis. Natus minima nulla distinctio similique a quidem corrupti sit architecto ratione eum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, necessitatibus aut porro explicabo maiores consequatur blanditiis temporibus omnis tempora dolor, repudiandae alias laudantium exercitationem fugit consequuntur iure iusto dolorum? Modi odio, eos neque eaque earum quae. Iste inventore laborum, iure accusamus architecto cupiditate dicta explicabo voluptatibus, sit perferendis illum dolor.</div>
+
+    <div class="tiga">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint voluptatibus consectetur, recusandae cum laboriosam, dicta, illo esse ipsum et harum vel temporibus amet totam! Explicabo, est hic ut ab molestiae assumenda cupiditate. Unde, dolorum, pariatur totam rerum adipisci dolore odio officia labore cum explicabo inventore illo dolores voluptates blanditiis placeat.</div>
+
+    <div class="empat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nesciunt hic quibusdam, reprehenderit dicta distinctio accusamus quas voluptatibus voluptatum maxime soluta temporibus natus ullam dolorum. Enim, optio dolores. Maxime sit dicta dolor aut, doloremque voluptate fuga labore, aperiam neque dolores ex, porro illum dolore inventore sed reprehenderit iusto sapiente ipsum?
+    </div>
+    <div class="lima">hello word</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.judul {
+    text-transform: capitalize;
+}
+
+hr {
+    width: 400px;
+    border-bottom: rgb(128, 123, 123) 2px solid;
+    opacity: .3;
+    margin-bottom: 50px;
+}
+.turun {
+    margin-bottom: 50px;
+}
+
+section {
+    min-height: 420px;
+}

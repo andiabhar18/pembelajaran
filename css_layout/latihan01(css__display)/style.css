@@ -1,0 +1,30 @@
+ a {
+    background-color: pink;
+ }
+.main {
+    background-color: greenyellow;
+    width: 600px;
+}
+
+.main h2 {
+    color: rgb(53, 191, 233);
+    background-color: brown;
+}
+
+span {
+    color: blue;
+}
+
+span:hover {
+    color: greenyellow;
+    font-size: large;
+    background-color: blue;
+}
+
+img {
+    display: none;
+}
+
+.navigasi li {
+    display: inline;
+}

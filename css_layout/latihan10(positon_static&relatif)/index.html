@@ -1,0 +1,67 @@
+<!-- 
+    CSS position
+properti position memiliki nilai:
+    1. static(default)
+        *static adalah nilai default dari tiap-tiap element ketika tidak diberi properti position
+        *menggunakan position selain statis(non-statis), akan membuat element seolah-olah berbeda dimensi dari element laimya
+        *element yang diberi position selain ststis dapat menggunakan properti top, left bottom, dan right untuk mengatur posisinya
+    2. relatif
+        *ketika kita menggunakan element dengan position relative (menggunakan properti top left bottom dan right) ruang yang ditempati oleh element tersebut masih ada
+        *ketika kita menggerakan element dengan posisi relatif,element akan bergerak relatif terhadap posisi semulanya
+        *jika kita memberikan properti top: o; dan left: 0; maka element tidak berubah posisinya
+    3. absolut
+        *ketika kita menggerakan element dengan posisi absolut (menggunakan properti top, left, bottom dan right) ruang yang ditempati oleh element diaggang tidak ada
+        *ketika kita menggerakkan element dengan posisi absolute, element akan bergerak relatif dengan parentnya, selama element parent-nya memiliki posisi yang juga non-static( berada pada dimensi yang sama)
+    4. fixed
+        *ketika kita menggerakkan element dengan posisi fixed, element akan bergerak relatif dengan jendela(window),
+        *fixed akan tetap absolut pada window bahkan saat window tersebut d scroll
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Position</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header cf">
+        <!-- pembahasan(default) -->
+        <div class="pembahasan">
+            <h3>pembahasan(default)</h3>
+            <p>static</p>
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+        </div>
+        <!-- pembahasan 1 -->
+        <div class="pembahasan1 ">
+            <h3>pembahasan 1</h3>
+            <p>Relative</p>
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+        </div>
+        <!-- pembahasan 2 -->
+        <div class="pembahasan2 cf">
+            <h3>pembahasan 2</h3>
+            <p>absolut</p>
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+        </div>
+        <!-- pembahasan 3 -->
+        <div class="pembahasan3 cf">
+            <h3>pembahasan 3</h3>
+            <p> fixed</p>
+            <div class="satu">1</div>
+            <div class="dua">2</div>
+            <div class="tiga">3</div>
+        </div>
+    </div>
+
+
+</body>
+</html>

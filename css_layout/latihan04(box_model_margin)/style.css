@@ -1,0 +1,139 @@
+.empat,.lima,.enam {
+    display: inline-block;
+}
+a {
+    text-decoration: none;
+    display: block;
+}
+
+a:visited {
+    color: rgb(56, 4, 105);
+}
+
+a:hover {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-weight: bolder;
+    color: red;
+    text-decoration: underline;
+}
+
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-left: 100PX;
+    margin-top: 30px;
+    margin-bottom: 150px;
+    margin-right: 50px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: 50px;
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    margin-bottom: 75px;
+}
+/* pemisah */
+.empat {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-right: 20px;
+    margin-bottom: 75px;
+}
+
+.lima {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-left: 20px;
+   
+}
+
+.enam {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    margin-bottom: 75px;
+}
+
+/* pemisah */
+.tujuh {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-bottom: 30px;
+}
+
+.delapan {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-top: -150px;
+}
+
+.sembilan {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    margin-bottom: 75px;
+}
+
+/* pemisah */
+
+.sepuluh {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sebelas {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.duabelas {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* pemisah */
+.tigabelas {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    margin: 50px auto;
+}
+
+.empatbelas {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 75px auto 50px;
+}
+
+.limabelas {
+    width: 50px;
+    height: 50px;
+    background-color: violet;
+    margin: 10px 20px 30px 40px;
+}
