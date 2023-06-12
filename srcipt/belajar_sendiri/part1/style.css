@@ -1,9 +1,0 @@
-img {
-    width: 300px;
-    height: auto;
-}
-
-image:hover::before {
-    content: attr(title);
-    background-color: aqua;
-}
