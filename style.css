@@ -1,8 +1,11 @@
-html, body, section {
+html,
+body,
+section {
   scroll-behavior: smooth;
 }
 
-.jumbotron, .bgb {
+.jumbotron,
+.bgb {
   background-color: #e2edff;
 }
 
@@ -23,6 +26,15 @@ html, body, section {
 .bgw {
   padding-top: 2rem;
 }
+
 section {
   padding-top: 5rem;
+}
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row>* {
+  padding: 0;
 }
