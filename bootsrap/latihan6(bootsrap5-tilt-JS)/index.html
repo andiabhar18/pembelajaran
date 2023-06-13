@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .kotak {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin: 50px auto;
+      display: flex;
+    }
+
+    .kotak h3 {
+      margin: auto;
+      font-size: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="kotak">
+    <h3>tulisan</h3>
+  </div>
+  <script src="tils.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".kotak"), {
+      max: 25,
+      speed: 400
+    });
+
+    //It also supports NodeList
+    VanillaTilt.init(document.querySelectorAll(".your-element"));
+  </script>
+</body>
+
+</html>
