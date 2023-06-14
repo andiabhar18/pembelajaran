@@ -137,6 +137,45 @@
 
       </div>
     </div>
+    <section id="my-foto-person">
+      <div class="container">
+        <div class="row">
+          <div class="col cap text-center">
+            <h2>my photo person</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="person-box">
+              <h4 class="person-name text-center">
+                stand up style
+              </h4>
+              <img src="img/tilt/tilt-1.png" alt="" class="person-img">
+              <a href="#" class="btn btn-primary person-name-detail">show detail</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="person-box bg-tilt-2">
+              <h4 class="person-name text-center">
+                shit down style
+              </h4>
+              <img src="img/tilt/tilt-2.png" alt="" class="person-img ">
+              <a href="#" class="btn btn-primary person-name-detail">show detail</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="person-box bg-tilt-3">
+              <h4 class="person-name text-center">
+                stand up backstyle
+              </h4>
+              <img src="img/tilt/tilt-3.png" alt="" class="person-img ">
+              <a href="#" class="btn btn-primary person-name-detail">show detail</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
     <svg xmlns="wave.svg" viewBox="0 0 1440 320">
       <path fill="#fff" fill-opacity="1"
         d="M0,128L48,138.7C96,149,192,171,288,197.3C384,224,480,256,576,234.7C672,213,768,139,864,128C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -207,11 +246,17 @@
 
       </div>
     </div>
+    <svg xmlns="wave.svg" viewBox="0 0 1440 320">
+      <path fill="#e2edff" fill-opacity="1"
+        d="M0,256L48,234.7C96,213,192,171,288,176C384,181,480,235,576,229.3C672,224,768,160,864,133.3C960,107,1056,117,1152,117.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+
   </section>
   <!-- galery end -->
 
   <!-- contact -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact bgb">
 
     <div class="container">
       <div class="row text-center mb-3">
@@ -335,6 +380,18 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+  </script>
+
+  <script src="tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll(".person-box"), {
+      max: 25,
+      speed: 400,
+      reverse: true,
+      glare: true
+    });
+
+    //It also supports NodeList
   </script>
 </body>
 

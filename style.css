@@ -37,4 +37,114 @@ section {
 
 #gallery .row>* {
   padding: 0;
+  border-radius: 10px;
+}
+
+
+/* person img section */
+.person-box {
+  position: relative;
+  background-image: url(img/tilt/tilt-1-bg.jpg);
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  background-size: cover;
+  transition: .5s;
+  transform-style: preserve-3d;
+}
+
+.bg-tilt-2 {
+  background-image: url(img/tilt/tilt-2-bg.jpg);
+}
+
+.bg-tilt-3 {
+  background-image: url(img/tilt/tilt-3-bg.jpg);
+}
+
+.person-box::before {
+  content: 'AB';
+  position: absolute;
+  color: #fff;
+  font-size: 7em;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0 0 5px black, 0 0 5px black;
+  top: 150px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  left: 30%;
+  transition: .5s;
+}
+
+.person-box:hover::before {
+  opacity: .5;
+  left: 50%;
+  transition: .5s;
+
+}
+
+.person-box::after {
+  content: 'PROJECK';
+  position: absolute;
+  color: #fff;
+  font-size: 5em;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 0 0 5px black, 0 0 5px black;
+  bottom: 0;
+  transform: translate(50%, -50%);
+  opacity: 0;
+  right: 25%;
+  transition: .5s;
+}
+
+.person-box:hover::after {
+  opacity: .5;
+  right: 50%;
+  transition: .5s;
+}
+
+.person-name {
+  position: absolute;
+  color: #fff;
+  position: absolute;
+  text-shadow: 0 0 5px black;
+  font-size: 2em;
+  opacity: 0;
+  transition: .5s;
+  width: 100%;
+  top: 0;
+  text-transform: capitalize;
+  transform: translate3d(0, 0, 50px);
+}
+
+.person-box:hover .person-name {
+  opacity: 1;
+  top: 20px;
+  transition: .5s;
+}
+
+.person-name-detail {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0, 100px);
+  transition: .5s;
+  opacity: 0;
+  bottom: -10px;
+}
+
+.person-box:hover .person-name-detail {
+  opacity: 1;
+  transition: .5s;
+  bottom: 20px;
+}
+
+.person-img {
+  width: 100%;
+  position: absolute;
+  transition: .5s;
+  transform: translate3d(0, 0, 75px);
+}
+
+.person-box:hover .person-img {
+  transition: .5s;
 }
