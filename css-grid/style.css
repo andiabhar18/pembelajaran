@@ -10,6 +10,91 @@ img {
 body {
   background-color: #ddd;
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Caveat', Arial, Helvetica, sans-serif;
   margin: 50px;
+}
+
+.header {
+  display: grid;
+  grid-template-areas: 
+  'hero hero feature-1'
+  'hero hero feature-2';
+}
+
+.hero {
+  grid-area: hero;
+  min-height: 300px;
+  background-image: url(img/4.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+
+.hero > * {
+  display: none;
+}
+
+.features {
+  display: grid;
+  color: white;
+  background-color: #000;
+  place-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.feature-1 {
+  grid-area: feature-1;
+  background-image: url(img/5.jpg);
+}
+
+.feature-2 {
+  grid-area: feature-2;
+  background-image: url(img/6.jpg);
+}
+
+.features .judul-story {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+/* navigsi */
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+}
+
+.menu .brand {
+  font-size: 1.3em;
+  color: #333;
+}
+
+.menu ul {
+  display: grid;
+  list-style: none;
+  text-transform: capitalize;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+}
+.menu a{
+  display: block;
+  background-color: #000;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+}
+
+
+/* responsife brack point */
+@media (max-width: 1024px){
+
+}
+@media (max-width: 768px){ 
+
+}
+
+@media (max-width: 500px){
+
 }
