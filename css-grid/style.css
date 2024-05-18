@@ -14,6 +14,11 @@ body {
   margin: 50px;
 }
 
+.container {
+  display: grid;
+  gap: 10px;
+}
+
 .header {
   display: grid;
   grid-template-areas: 
@@ -63,6 +68,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
+  order: -1;
 }
 
 .menu .brand {
@@ -89,7 +95,26 @@ body {
 
 /* responsife brack point */
 @media (max-width: 1024px){
-
+  .menu {
+    order: inherit;
+    grid-template-columns: 1fr;
+  }
+  .menu .brand {
+    display: none;
+  }
+  .hero > * {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
 }
 @media (max-width: 768px){ 
 
