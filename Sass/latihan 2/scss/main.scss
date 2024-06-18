@@ -1,0 +1,25 @@
+
+.main {
+  background-color: lightblue;
+  .container & {
+    background-color: gray;
+  }
+  & &-heading {
+    font-size: 2em;
+  }
+  & &-paragraph {
+    font-size: 1.4em;
+  }
+
+  &:hover {
+    background-color: lightblue;
+  }
+}
+
+.main, .footer {
+  h1, p {
+    letter-spacing: 1px;
+  }
+}
+
+

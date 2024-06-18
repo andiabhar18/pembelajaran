@@ -1,0 +1,19 @@
+.main {
+  background-color: lightblue;
+}
+.container .main {
+  background-color: gray;
+}
+.main .main-heading {
+  font-size: 2em;
+}
+.main .main-paragraph {
+  font-size: 1.4em;
+}
+.main:hover {
+  background-color: lightblue;
+}
+
+.main h1, .main p, .footer h1, .footer p {
+  letter-spacing: 1px;
+}/*# sourceMappingURL=main.css.map */

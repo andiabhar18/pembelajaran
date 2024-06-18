@@ -1,0 +1,11 @@
+$myColor: salmon;
+header {
+  background-color: lightblue;
+  h1 {
+    color: rgb(240, 121, 121);
+    font-size: 3em;
+  }
+  p {
+    color: $myColor
+  }
+}

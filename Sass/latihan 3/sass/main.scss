@@ -1,0 +1,54 @@
+body {
+  font-family: serif;
+  h1,
+  p {
+    text-transform: capitalize;
+    text-align: center;
+  }
+}
+
+// css variable
+:root {
+  --primary-color: rgb(185, 185, 185);
+  --seconday-color: red;
+  --text-color: purple;
+}
+
+.latihan-1 {
+  background-color: var(--primary-color);
+
+  h1 {
+    color: var(--text-color);
+  }
+
+  p {
+    color: var(--text-color);
+  }
+}
+// sass variable
+
+$text-color: rgb(105, 128, 0);
+$primary-color: rgb(185, 185, 185);
+
+.latihan-2 {
+  background-color: $primary-color;
+  h1,
+  p {
+    color: $text-color;
+    $seconday-color: red !global;
+  }
+  p.merah {
+    color: $seconday-color;
+  }
+}
+
+// map
+
+$alert-danger: red;
+$alert-succes: green;
+$alert-warnig: orange;
+.latihan-3 {
+  h1 {
+    color: $alert-warnig;
+  }
+}

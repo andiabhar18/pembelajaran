@@ -1,0 +1,39 @@
+body {
+  font-family: serif;
+}
+body h1,
+body p {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+:root {
+  --primary-color: rgb(185, 185, 185);
+  --seconday-color: red;
+  --text-color: purple;
+}
+
+.latihan-1 {
+  background-color: var(--primary-color);
+}
+.latihan-1 h1 {
+  color: var(--text-color);
+}
+.latihan-1 p {
+  color: var(--text-color);
+}
+
+.latihan-2 {
+  background-color: rgb(185, 185, 185);
+}
+.latihan-2 h1,
+.latihan-2 p {
+  color: rgb(105, 128, 0);
+}
+.latihan-2 p.merah {
+  color: red;
+}
+
+.latihan-3 h1 {
+  color: orange;
+}/*# sourceMappingURL=main.css.map */
