@@ -428,15 +428,25 @@ body { isolation: isolate; }
     min-height: 28rem;
   }
 }
+@media (max-width: 920px) {
+  .collage-video, .collage-video.is-portrait {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+  }
+  .collage-thumb { width: 100%; }
+  .collage-video .collage-thumb img {
+    position: static;
+    display: block;
+    height: auto;
+  }
+}
 @media (max-width: 720px) {
   .video-collage {
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "a" "b" "c" "d" "e" "f";
     gap: .85rem;
   }
-  .collage-video, .collage-video.is-portrait { aspect-ratio: auto; }
-  .collage-thumb { aspect-ratio: 16/9; }
-  .is-portrait .collage-thumb { aspect-ratio: 9/16; }
 }
 </style>
 </head>
@@ -476,12 +486,12 @@ body { isolation: isolate; }
 </ul>
 </div></section>
 <section class="section" id="karya"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Portofolio video</p><h2>Karya visual.</h2></div><p class="muted">Pilih kartu untuk memutar video dalam layar penuh.</p></div><div class="video-collage">
-<button type="button" class="collage-video" data-tile="a" data-video="/reel-1.mp4" aria-label="Putar video pilihan"><span class="collage-thumb"><img src="/reel-1.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video pilihan</strong><time datetime="PT1M19S">1:19</time></span></button>
-<button type="button" class="collage-video" data-tile="b" data-video="/reel-2.mp4" aria-label="Putar video 2"><span class="collage-thumb"><img src="/reel-2.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 2</strong><time datetime="PT30S">0:30</time></span></button>
-<button type="button" class="collage-video" data-tile="c" data-video="/reel-3.mp4" aria-label="Putar video 3"><span class="collage-thumb"><img src="/reel-3.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 3</strong><time datetime="PT1M15S">1:15</time></span></button>
-<button type="button" class="collage-video is-portrait" data-tile="d" data-video="/reel-4.mp4" aria-label="Putar video 4"><span class="collage-thumb"><img src="/reel-4.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 4</strong><time datetime="PT27S">0:27</time></span></button>
-<button type="button" class="collage-video is-portrait" data-tile="e" data-video="/reel-5.mp4" aria-label="Putar video 5"><span class="collage-thumb"><img src="/reel-5.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 5</strong><time datetime="PT10S">0:10</time></span></button>
-<button type="button" class="collage-video" data-tile="f" data-video="/reel-6.mp4" aria-label="Putar video 6"><span class="collage-thumb"><img src="/reel-6.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 6</strong><time datetime="PT20S">0:20</time></span></button>
+<button type="button" class="collage-video" data-tile="a" data-video="/reel-1.mp4" aria-label="Putar video pilihan"><span class="collage-thumb"><img src="/reel-1.jpg" alt="" width="1920" height="1080"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video pilihan</strong><time datetime="PT1M19S">1:19</time></span></button>
+<button type="button" class="collage-video" data-tile="b" data-video="/reel-2.mp4" aria-label="Putar video 2"><span class="collage-thumb"><img src="/reel-2.jpg" alt="" width="1920" height="1080"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 2</strong><time datetime="PT30S">0:30</time></span></button>
+<button type="button" class="collage-video" data-tile="c" data-video="/reel-3.mp4" aria-label="Putar video 3"><span class="collage-thumb"><img src="/reel-3.jpg" alt="" width="1920" height="1080"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 3</strong><time datetime="PT1M15S">1:15</time></span></button>
+<button type="button" class="collage-video is-portrait" data-tile="d" data-video="/reel-4.mp4" aria-label="Putar video 4"><span class="collage-thumb"><img src="/reel-4.jpg" alt="" width="1080" height="1920"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 4</strong><time datetime="PT27S">0:27</time></span></button>
+<button type="button" class="collage-video is-portrait" data-tile="e" data-video="/reel-5.mp4" aria-label="Putar video 5"><span class="collage-thumb"><img src="/reel-5.jpg" alt="" width="720" height="1280"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 5</strong><time datetime="PT10S">0:10</time></span></button>
+<button type="button" class="collage-video" data-tile="f" data-video="/reel-6.mp4" aria-label="Putar video 6"><span class="collage-thumb"><img src="/reel-6.jpg" alt="" width="720" height="405"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 6</strong><time datetime="PT20S">0:20</time></span></button>
 </div>
 </div></section>
 <section class="section" id="washilah"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Pers Mahasiswa UKM LIMA</p><h2>Tulisan di Washilah.</h2></div><p class="muted">Pilihan berita kampus, liputan cek fakta, dan opini pendidikan.</p></div><div class="stories">
