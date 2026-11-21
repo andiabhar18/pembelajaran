@@ -1,398 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ab-Project</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="aos.css">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#121317">
+<meta name="description" content="Portofolio Andi Abhar, videografi, penyuntingan video, dan tulisan jurnalistik di Washilah.">
+<title>Andi Abhar — Karya Visual &amp; Jurnalistik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#121317;--surface:#1b1e25;--ink:#f8f6f0;--muted:#bfc0c8;--line:#363943;--mint:#a7f5da;--warm:#f7bb91;--heading:"Space Grotesk",system-ui,sans-serif;--body:"Manrope",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);font:1rem/1.65 var(--body)}h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-family:var(--heading);line-height:1.03}h2{font-size:clamp(2.55rem,6.8vw,5.5rem);letter-spacing:-.065em}h3{font-size:clamp(1.15rem,1.8vw,1.45rem);letter-spacing:-.025em}a{color:inherit;text-underline-offset:.25em}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--mint);outline-offset:4px}img{display:block;width:100%}button,input,textarea{font:inherit}.wrap{width:min(1200px,calc(100% - 3rem));margin-inline:auto}.skip{position:fixed;top:-4rem;left:1rem;background:var(--mint);color:var(--bg);padding:.5rem 1rem;z-index:5}.skip:focus{top:.5rem}.muted{color:var(--muted)}.eyebrow{font-size:.74rem;letter-spacing:.13em;font-weight:800;text-transform:uppercase;color:var(--mint)}.section{padding-block:clamp(3.8rem,9vw,8rem);border-top:1px solid var(--line);overflow-x:clip}.section-head{display:flex;gap:1rem;justify-content:space-between;align-items:end;margin-bottom:clamp(1.5rem,4vw,3rem)}.section-head .eyebrow{margin-bottom:.65rem}.section-head>p{max-width:32ch}.top{padding-block:1rem;border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:1.1rem}.brand{font:700 1.18rem var(--heading);text-decoration:none;white-space:nowrap}.brand span{color:var(--mint)}nav{display:flex;gap:clamp(.7rem,3vw,1.85rem);flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-size:.86rem;font-weight:700}nav a:hover,.story:hover h3,.contact-links a:hover{color:var(--mint)}.pill{display:inline-flex;align-items:center;justify-content:center;gap:.8em;padding:.72rem 1.05rem;border:1px solid var(--mint);border-radius:999px;color:var(--bg);background:var(--mint);font-weight:800;text-decoration:none;font-size:.88rem;cursor:pointer}.pill:hover{background:#d1ffef}.pill.outline{background:transparent;color:var(--mint)}.pill.outline:hover{background:#a7f5da15}
+.hero{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:clamp(1.4rem,5vw,5rem);align-items:center;padding-block:clamp(2rem,5vw,5.2rem) clamp(3rem,8vw,6rem)}.hero .eyebrow{display:flex;align-items:center;gap:.55rem}.hero .eyebrow::before{content:"";display:inline-block;width:.52rem;height:.52rem;background:var(--warm);border-radius:50%}.hero h1{font-size:clamp(4.1rem,12vw,10.25rem);line-height:.83;letter-spacing:-.09em;margin:.16em 0 .24em}.hero h1 span{display:block;color:var(--mint)}.hero-copy{max-width:41ch;color:var(--muted);font-size:clamp(.97rem,1.6vw,1.12rem)}.hero-links{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:1.55rem}.hero-links>a:not(.pill){font-size:.9rem;font-weight:800}.hero-photo{position:relative;padding:.6rem;border:1px solid var(--line);border-radius:5rem 1rem 1rem 1rem;background:var(--surface)}.hero-photo div{position:relative;overflow:hidden;border-radius:4.5rem .65rem .65rem .65rem;aspect-ratio: .78}.hero-photo img{height:100%;object-fit:cover;object-position:50% 61%;filter:saturate(.72) contrast(1.07) brightness(.94)}.hero-photo div::after,.photo-tile .frame::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(155deg,#18383525,transparent 55%,#1a142b55)}.hero-photo figcaption{padding:.65rem .25rem .08rem;color:var(--muted);font-size:.81rem}
+.about{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:clamp(1.4rem,5vw,4rem);align-items:start}.about h2{margin:.5rem 0 1rem}.about p+p{margin-top:.8rem}.skills{display:grid;gap:.8rem}.skill,.coffee{background:var(--surface);border:1px solid var(--line);border-radius:1rem;padding:1.15rem}.skill p,.coffee p{margin-top:.4rem;color:var(--muted)}.award{margin-top:1.15rem;padding:.75rem 1rem;border-left:3px solid var(--warm);background:#f7bb9114}.award strong{color:var(--warm)}
+.work{display:grid;grid-template-columns:minmax(0,1.618fr) minmax(0,1fr);gap:1rem;align-items:start}.work>article:first-child{grid-row:span 2}.work>article{min-width:0}.work h3{margin-top:.55rem}.cover{display:block;position:relative;width:100%;padding:0;aspect-ratio:16/9;background:var(--surface);border:1px solid var(--line);border-radius:1rem;overflow:hidden;cursor:pointer}.cover img{height:100%;object-fit:cover;transition:transform .35s}.cover.vertical{aspect-ratio:4/3}.cover.vertical img{object-fit:contain}.cover:hover img{transform:scale(1.04)}.play{position:absolute;right:.7rem;bottom:.7rem;display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;color:var(--bg);background:var(--mint);font-size:.9rem}
+.stories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}.story{min-width:0;display:flex;flex-direction:column;align-items:start;gap:.7rem;padding:clamp(1rem,3vw,1.65rem);min-height:10rem;background:var(--surface);border:1px solid var(--line);border-radius:1rem;text-decoration:none}.story:hover{border-color:var(--mint)}.story .meta{font-size:.76rem;letter-spacing:.06em;color:var(--warm);font-weight:800}.story .arrow{margin-top:auto;color:var(--mint);font-size:.82rem;font-weight:800}
+.photo-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:1.2rem;align-items:start}.photo-tile .frame{position:relative;border:1px solid var(--line);border-radius:1.2rem;overflow:hidden;aspect-ratio:.82}.photo-tile img{height:100%;object-fit:cover;object-position:center 58%;filter:saturate(.72) contrast(1.06) brightness(.94)}.photo-tile figcaption{padding:.6rem 0;color:var(--muted);font-size:.85rem}.coffee{margin-top:1.2rem;border-left:2px solid var(--warm)}.coffee h3{color:var(--warm)}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.618fr);gap:clamp(1.5rem,5vw,5rem)}.contact h2{margin:.5rem 0 1.15rem}.contact-links{display:grid;gap:.68rem;margin-top:1.25rem;font-size:.9rem;overflow-wrap:anywhere}.contact-links a{font-weight:700}.form{display:grid;gap:.9rem;padding:clamp(1rem,3vw,2rem);border:1px solid var(--line);border-radius:1.15rem;background:var(--surface)}.form label{display:grid;gap:.3rem;font-size:.88rem;font-weight:800}.form input,.form textarea{width:100%;color:var(--ink);border:1px solid #555864;border-radius:.55rem;background:#14161c;padding:.63rem .74rem}.form textarea{resize:vertical;min-height:7rem}.form .pill{justify-self:start}.form p{font-size:.83rem;color:var(--muted)}footer{border-top:1px solid var(--line)}footer .wrap{display:flex;justify-content:space-between;gap:1rem;padding-block:1rem;color:var(--muted);font-size:.81rem}
+dialog{border:0;margin:0;padding:0;inset:0;width:100%;height:100%;max-width:none;max-height:none;background:#080808;color:white}dialog::backdrop{background:#080808}.stage{position:relative;width:100%;height:100%;background:#080808}.stage video{width:100%;height:100%;object-fit:contain;display:block}.stage .tools{position:absolute;top:max(.8rem,env(safe-area-inset-top));right:max(.8rem,env(safe-area-inset-right));display:flex;gap:.45rem}.tools button{background:#17171bee;color:white;border:1px solid #a6a6a6;border-radius:.5rem;padding:.45rem .75rem;cursor:pointer}
+@media(max-width:720px){.wrap{width:calc(100% - 2rem)}.nav{flex-wrap:wrap;justify-content:space-between}.nav nav{order:3;flex-basis:100%}.hero,.about,.contact{grid-template-columns:1fr}.hero h1{font-size:clamp(4rem,16vw,7rem)}.hero-photo{width:min(100%,24rem)}.section-head{display:block}.section-head>p{margin-top:.7rem}.work>article:first-child{grid-column:1/-1;grid-row:auto}.work{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-layout{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-tile figcaption{font-size:.75rem}}
+@media(max-width:450px){.stories{grid-template-columns:1fr}.story{min-height:8.5rem}.play{width:2rem;height:2rem}.photo-layout{gap:.7rem}.pill{padding:.62rem .85rem}}
+[data-reveal]{opacity:1}.enter{animation:enter .65s both cubic-bezier(.22,.61,.36,1)}.hero-photo.enter{animation-delay:.12s}.reveal-ready [data-reveal]:not(.seen){opacity:0;transform:translateY(20px)}.reveal-ready [data-reveal]{transition:opacity .55s,transform .55s}.reveal-ready [data-reveal].seen{opacity:1;transform:none}.tilt{transition:transform .18s ease-out}
+@keyframes enter{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.enter{animation:none}.reveal-ready [data-reveal]{transition:none;transform:none!important;opacity:1!important}.tilt,.cover img{transition:none}}
+</style>
 </head>
+<body id="atas">
+<a class="skip" href="#konten">Lewati ke konten</a>
+<header class="top"><div class="wrap nav">
+<a class="brand" href="#atas">Andi Abhar<span>.</span></a>
+<nav aria-label="Navigasi utama"><a href="#tentang">Tentang</a><a href="#karya">Video</a><a href="#washilah">Tulisan</a><a href="#galeri">Foto</a></nav>
+<a class="pill outline" href="#kontak">Hubungi saya</a>
+</div></header>
+<main id="konten">
+<section class="hero wrap" aria-label="Profil Andi Abhar">
+<div class="enter"><p class="eyebrow">Gowa, Sulawesi Selatan</p><h1>Andi <span>Abhar</span></h1><p class="hero-copy">Saya mendokumentasikan cerita lewat kamera, menyuntingnya menjadi video, dan menulis liputan untuk pers mahasiswa Washilah.</p><div class="hero-links"><a class="pill" href="#karya">Lihat karya video ↓</a><a href="#washilah">Baca tulisan</a></div></div>
+<figure class="hero-photo enter"><div><img src="abhar-arches.webp" alt="Andi Abhar berdiri di bawah lengkungan batu" fetchpriority="high" width="900" height="1600"></div><figcaption>Andi Abhar · Potret dari album pribadi</figcaption></figure>
+</section>
+<section class="section" id="tentang"><div class="wrap about">
+<div data-reveal><p class="eyebrow">Tentang saya</p><h2>Dari lapangan<br>ke layar.</h2><p class="muted">Saya mahasiswa Ilmu Hukum di UIN Alauddin Makassar dengan pengalaman sebagai reporter pers mahasiswa, dalam advokasi, dan dalam produksi konten digital. Peliputan dan wawancara melatih saya mencari sudut cerita serta menyusun informasi dengan jelas.</p><p class="muted">Saya terbiasa menggunakan kamera, drone, dan gimbal. Saya menyunting di CapCut Desktop dan terus mengasah komposisi, sudut pengambilan, serta gerak kamera.</p><div class="award"><strong>Juara I sebagai editor video</strong><br>Lomba Video Mars PTA Bali, tingkat Provinsi Bali.</div></div>
+<div class="skills" data-reveal><article class="skill"><h3>Videografi</h3><p>Pengambilan gambar dengan kamera, drone, dan gimbal.</p></article><article class="skill"><h3>Penyuntingan video</h3><p>Menyusun footage dan membangun ritme cerita di CapCut Desktop.</p></article><article class="skill"><h3>Jurnalistik</h3><p>Peliputan, wawancara, verifikasi informasi, dan penulisan berita.</p></article></div>
+</div></section>
+<section class="section" id="karya"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Portofolio video</p><h2>Karya visual.</h2></div><p class="muted">Pilih sampul untuk memutar video dalam layar penuh.</p></div><div class="work">
+<article data-reveal><button type="button" class="cover" data-video="/reel-1.mp4" aria-label="Putar video pilihan"><img src="/reel-1.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span></button><h3>Video pilihan</h3></article>
+<article data-reveal><button type="button" class="cover" data-video="/reel-2.mp4" aria-label="Putar video 2"><img src="/reel-2.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span></button><h3>Video 2</h3></article>
+<article data-reveal><button type="button" class="cover" data-video="/reel-3.mp4" aria-label="Putar video 3"><img src="/reel-3.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span></button><h3>Video 3</h3></article>
+<article data-reveal><button type="button" class="cover vertical" data-video="/reel-4.mp4" aria-label="Putar video 4"><img src="/reel-4.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span></button><h3>Video 4</h3></article>
+<article data-reveal><button type="button" class="cover vertical" data-video="/reel-5.mp4" aria-label="Putar video 5"><img src="/reel-5.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true">▶</span></button><h3>Video 5</h3></article>
+</div></div></section>
+<section class="section" id="washilah"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Pers Mahasiswa UKM LIMA</p><h2>Tulisan di Washilah.</h2></div><p class="muted">Pilihan berita kampus, liputan cek fakta, dan opini pendidikan.</p></div><div class="stories">
+<a class="story" data-reveal href="https://washilah.com/2026/05/mengurai-benang-kusut-pendidikan-nasional-di-tengah-berbagai-janji-perubahan/"><span class="meta">OPINI · MEI 2026</span><h3>Mengurai Benang Kusut Pendidikan Nasional di Tengah Berbagai Janji Perubahan</h3><span class="arrow">Baca di Washilah →</span></a>
+<a class="story" data-reveal href="https://washilah.com/2026/01/jurusan-ilmu-hukum-fsh-uin-alauddin-resmi-raih-akreditasi-unggul/"><span class="meta">BERITA KAMPUS · JANUARI 2026</span><h3>Jurusan Ilmu Hukum FSH UIN Alauddin Resmi Raih Akreditasi Unggul</h3><span class="arrow">Baca di Washilah →</span></a>
+<a class="story" data-reveal href="https://washilah.com/2026/01/lpp-u-ungkap-dugaan-sertifikat-palsu-bakal-calon-presiden-mahasiswa/"><span class="meta">BERITA KAMPUS · JANUARI 2026</span><h3>LPP-U Ungkap Dugaan Sertifikat Palsu Bakal Calon Presiden Mahasiswa</h3><span class="arrow">Baca di Washilah →</span></a>
+<a class="story" data-reveal href="https://washilah.com/2026/01/dugaan-sertifikat-palsu-ungkap-minimnya-sosialisasi-juknis-pemilma/"><span class="meta">BERITA KAMPUS · JANUARI 2026</span><h3>Dugaan Sertifikat Palsu Ungkap Minimnya Sosialisasi Juknis Pemilma</h3><span class="arrow">Baca di Washilah →</span></a>
+<a class="story" data-reveal href="https://washilah.com/2025/07/mahasiswa-kkn-ditolak-warga-ini-faktanya/"><span class="meta">CEK FAKTA · JULI 2025</span><h3>Mahasiswa KKN Ditolak Warga? Ini Faktanya</h3><span class="arrow">Baca di Washilah →</span></a>
+</div></div></section>
+<section class="section" id="galeri"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Album pribadi</p><h2>Di luar pekerjaan.</h2></div></div><div class="photo-layout">
+<figure class="photo-tile" data-reveal><div class="frame tilt"><img src="abhar-reflection.webp" loading="lazy" alt="Gerbang batu dan pantulannya di bawah langit biru"></div><figcaption>Gerbang dan pantulan</figcaption></figure>
+<figure class="photo-tile" data-reveal><div class="frame tilt"><img src="abhar-water.webp" loading="lazy" alt="Bangunan beratap merah di tepi air"></div><figcaption>Pemandangan tepi air</figcaption></figure>
+</div><article class="coffee" data-reveal><h3>Kopi, terutama manual brew</h3><p>Di sela kegiatan, saya menikmati kopi. Saya paling suka kopi yang diseduh dengan teknik manual brew.</p></article></div></section>
+<section class="section" id="kontak"><div class="wrap contact">
+<div><p class="eyebrow">Kontak</p><h2>Mari ngobrol.</h2><p class="muted">Untuk kolaborasi video, liputan, atau sekadar obrolan tentang kopi.</p><div class="contact-links">
+<a href="mailto:andiabharanakselayar@gmail.com">andiabharanakselayar@gmail.com</a>
+<a href="https://wa.me/6285696540321">WhatsApp · 085696540321</a>
+<a href="https://www.instagram.com/ad_abharhst/">Instagram · @ad_abharhst</a>
+</div></div>
+<form class="form" id="email-form">
+<label>Nama<input name="name" autocomplete="name" maxlength="100" required></label>
+<label>Email Anda<input name="email" type="email" autocomplete="email" maxlength="160" required></label>
+<label>Pesan<textarea name="message" maxlength="1800" rows="5" required></textarea></label>
+<button class="pill" type="submit">Buka draf email →</button>
+<p>Aplikasi email Anda akan terbuka dengan pesan yang sudah terisi. Kirim dari aplikasi tersebut.</p>
+</form></div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 Andi Abhar</span><a href="#atas">Kembali ke atas ↑</a></div></footer>
+<dialog id="player" aria-label="Pemutar video"><div class="stage"><video controls playsinline preload="none"></video><div class="tools"><button type="button" id="full">Layar penuh</button><button type="button" id="close" autofocus>Tutup ×</button></div></div></dialog>
+<script>
+const form = document.querySelector('#email-form');
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  const data = new FormData(form);
+  const to = document.querySelector('.contact-links a[href^="mailto:"]').href;
+  const subject = encodeURIComponent('Pesan portofolio dari ' + data.get('name').trim());
+  const body = encodeURIComponent(data.get('message').trim() + '\n\n' + data.get('name').trim() + '\n' + data.get('email').trim());
+  window.location.href = to + '?subject=' + subject + '&body=' + body;
+});
 
-<body id="home">
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Ab-project</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">about</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">contact me</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- navbar end -->
+const player = document.querySelector('#player');
+const stage = player.querySelector('.stage');
+const video = player.querySelector('video');
+let opener;
+function fullscreen() {
+  if (document.fullscreenElement) return;
+  if (document.fullscreenEnabled && stage.requestFullscreen) {
+    stage.requestFullscreen().catch(() => {});
+  } else if (video.readyState && typeof video.webkitEnterFullscreen === 'function') {
+    try { video.webkitEnterFullscreen(); } catch {}
+  }
+}
+document.querySelectorAll('[data-video]').forEach(button => {
+  button.addEventListener('click', () => {
+    opener = button;
+    video.poster = button.querySelector('img').src;
+    video.src = button.dataset.video;
+    player.showModal();
+    document.body.style.overflow = 'hidden';
+    video.play().catch(() => {});
+    fullscreen();
+  });
+});
+document.querySelector('#full').addEventListener('click', fullscreen);
+document.querySelector('#close').addEventListener('click', () => player.close());
+player.addEventListener('close', () => {
+  if (document.fullscreenElement === stage) document.exitFullscreen().catch(() => {});
+  video.pause();
+  video.removeAttribute('src');
+  video.load();
+  document.body.style.overflow = '';
+  opener?.focus({ preventScroll: true });
+});
 
-  <!-- jumbotron -->
-  <section class="jumbotron text-center bgb ">
-    <img src="img/abhar-tamnel.jpg" width="200" alt="" class="rounded-circle img-thumbnail" />
-    <h1 class="display-4 cap">andi abhar, s.Kom,M.Kom</h1>
-    <p class="lead cap"></p>
-    <svg xmlns="wave.svg" viewBox="0 0 1440 320">
-      <path fill="#ffff" fill-opacity="1"
-        d="M0,32L80,69.3C160,107,320,181,480,181.3C640,181,800,107,960,80C1120,53,1280,75,1360,85.3L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-      </path>
-    </svg>
-  </section>
-  <!-- jumbotron end -->
-
-  <!-- about -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="row text-center mb-4">
-        <div class="col">
-          <h2 data-aos="fade-up" class="cap">about me</h2>
-        </div>
-      </div>
-      <div class="row justify-content-around text-center fs-5">
-        <div data-aos="fade-right" data-aos-delay="200" class="col-sm-5">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore eaque odio cupiditate voluptate
-            consequuntur eveniet incidunt suscipit, voluptatibus rem amet?</p>
-        </div>
-        <div data-aos="fade-left" data-aos-delay="400" class="col-sm-5">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, recusandae accusamus. Accusamus quis, sequi
-            doloribus animi cupiditate similique, maiores nostrum nihil labore rerum voluptatibus ab.</p>
-        </div>
-      </div>
-    </div>
-    <svg xmlns="wave.svg" viewBox="0 0 1440 320">
-      <path fill="#e2edff" fill-opacity="1"
-        d="M0,256L48,234.7C96,213,192,171,288,176C384,181,480,235,576,229.3C672,224,768,160,864,133.3C960,107,1056,117,1152,117.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-  </section>
-  <!-- about end -->
-
-  <!-- my project -->
-
-  <section class="projects bgb" id="projects">
-    <div class="container">
-      <div class="row text-center mb-4">
-        <div class="col cap">
-          <h2>my project</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-4 mb-3">
-          <div class="card" data-aos="flip-left" data-aos-duration="1000">
-            <img src="img/portfolio/gambar-1.jpg" class="card-img-top" style="height: 20rem;" alt="...">
-            <div class="card-body">
-              <p class="card-text">ini adalah card yang berisi calon project saya. saya berharap kedepapanya akan ada
-                yang mau berkolaborasi dengan perusahan besar</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
-            <img src="img/portfolio/gambar-2.jpg" class="card-img-top" style="height: 20rem;" alt="...">
-            <div class="card-body">
-              <p class="card-text">ini adalah card yang berisi calon project saya. saya berharap kedepapanya akan ada
-                yang mau berkolaborasi dengan perusahan besar</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
-            <img src="img/portfolio/gambar-3.jpg" class="card-img-top" style="height: 20rem;" alt="...">
-            <div class="card-body">
-              <p class="card-text">ini adalah card yang berisi calon project saya. saya berharap kedepapanya akan ada
-                yang mau berkolaborasi dengan perusahan besar</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
-            <img src="img/portfolio/gambar-3.jpg" class="card-img-top" style="height: 20rem;" alt="...">
-            <div class="card-body">
-              <p class="card-text">ini adalah card yang berisi calon project saya. saya berharap kedepapanya akan ada
-                yang mau berkolaborasi dengan perusahan besar</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-3">
-          <div class="card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
-            <img src="img/portfolio/gambar-3.jpg" class="card-img-top" style="height: 20rem;" alt="...">
-            <div class="card-body">
-              <p class="card-text">ini adalah card yang berisi calon project saya. saya berharap kedepapanya akan ada
-                yang mau berkolaborasi dengan perusahan besar</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <section id="my-foto-person">
-      <div class="container">
-        <div class="row">
-          <div class="col cap text-center">
-            <h2>my photo person</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6 col-lg-4">
-            <div class="person-box">
-              <h4 class="person-name text-center">
-                stand up style
-              </h4>
-              <img src="img/tilt/tilt-1.png" alt="" class="person-img">
-              <a href="#" class="btn btn-primary person-name-detail">show detail</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="person-box bg-tilt-2">
-              <h4 class="person-name text-center">
-                shit down style
-              </h4>
-              <img src="img/tilt/tilt-2.png" alt="" class="person-img ">
-              <a href="#" class="btn btn-primary person-name-detail">show detail</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="person-box bg-tilt-3">
-              <h4 class="person-name text-center">
-                stand up backstyle
-              </h4>
-              <img src="img/tilt/tilt-3.png" alt="" class="person-img ">
-              <a href="#" class="btn btn-primary person-name-detail">show detail</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <svg xmlns="wave.svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1"
-        d="M0,128L48,138.7C96,149,192,171,288,197.3C384,224,480,256,576,234.7C672,213,768,139,864,128C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-  </section>
-  <!-- my project end -->
-
-  <!-- galery -->
-  <section id="gallery">
-    <div class="container">
-      <div class="row text-center mb-3">
-        <div class="col">
-          <h2 class="cap">gallery</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/1.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/2.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/3.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/4.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/5.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/6.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/7.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/8.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/9.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-5 ">
-          <a href="#">
-            <img src="img/gallery/10.jpg" alt="" class="img-fluid gallery-img">
-          </a>
-        </div>
-
-      </div>
-    </div>
-    <svg xmlns="wave.svg" viewBox="0 0 1440 320">
-      <path fill="#e2edff" fill-opacity="1"
-        d="M0,256L48,234.7C96,213,192,171,288,176C384,181,480,235,576,229.3C672,224,768,160,864,133.3C960,107,1056,117,1152,117.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-
-  </section>
-  <!-- galery end -->
-
-  <!-- contact -->
-  <section id="contact" class="contact bgb">
-
-    <div class="container">
-      <div class="row text-center mb-3">
-        <div class="col">
-          <h2 class="cap">contact me</h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="alert my-alert alert-success alert-dismissible fade show d-none" role="alert">
-            <strong>Terimah Kasih</strong> pesan anda telah di kirim.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>
-          <form name="submit-to-google-sheet">
-            <div class="mb-3 cap">
-              <label for="name" class="form-label">your name</label>
-              <input type="text" class="form-control" id="name" aria-describedby="name" name="nama">
-            </div>
-            <div class="mb-3 cap">
-              <label for="email" class="form-label">your email</label>
-              <input type="text" class="form-control" id="email" aria-describedby="email" name="email">
-            </div>
-            <div class="mb-3 cap">
-              <label for="pesan" class="form-label">your mail</label>
-              <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-kirim">Submit</button>
-            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
-              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-              Loading...
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <svg xmlns="wave.svg" viewBox="0 0 1440 320">
-      <path fill="#0d6efd" fill-opacity="1"
-        d="M0,64L40,96C80,128,160,192,240,186.7C320,181,400,107,480,106.7C560,107,640,181,720,224C800,267,880,277,960,256C1040,235,1120,181,1200,149.3C1280,117,1360,107,1400,101.3L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
-      </path>
-    </svg>
-  </section>
-  <!-- contact end -->
-
-  <!-- footer -->
-  <footer class="cap bg-primary text-white text text-center pb-5">
-    <p>&#169;created with love by
-      <a href="" class="text-white fw-bold text-decoration-none">Ab-Project</a>
-    </p>
-  </footer>
-  <!-- fotter end -->
-
-  <!-- project -->
-  <!-- <script src="js/popper.js"></script> -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="aos.js"></script>
-  <script>
-    const galleryImg = document.querySelectorAll('.gallery-img')
-
-    galleryImg.forEach((img, i) => {
-      img.dataset.aos = 'fade-down'
-      img.dataset.aosDelay = i * 100
-    })
-
-    AOS.init({
-      once: true,
-      duration: 1000,
+if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  if ('IntersectionObserver' in window) {
+    const reveal = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add('seen');
+        reveal.unobserve(entry.target);
+      }
+    }, { threshold: .06 });
+    document.documentElement.classList.add('reveal-ready');
+    document.querySelectorAll('[data-reveal]').forEach(el => reveal.observe(el));
+  }
+  if (matchMedia('(pointer:fine)').matches) {
+    document.querySelectorAll('.tilt').forEach(el => {
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - .5;
+        const y = (e.clientY - r.top) / r.height - .5;
+        el.style.transform = 'perspective(900px) rotateX(' + (-y * 9) + 'deg) rotateY(' + (x * 9) + 'deg)';
+      });
+      el.addEventListener('pointerleave', () => el.style.removeProperty('transform'));
     });
-  </script>
-
-  <script src="gsap.min.js"></script>
-  <script>
-    gsap.from('.jumbotron img', {
-      duration: 1,
-      y: -100,
-      opacity: 0.4,
-      ease: "bounce.out",
-      rotateY: 360 * 0.5
-    });
-    gsap.from('.navbar', {
-      duration: 1.5,
-      y: '-100%',
-      opacity: 0.4,
-      ease: "bounce.out",
-    });
-    gsap.from('.display-4', {
-      duration: 1,
-      x: -50,
-      opacity: 0,
-      delay: 0.5,
-      ease: " back.out(1.7)",
-    });
-    gsap.to('.lead', {
-      duration: 2,
-      delay: 1.5,
-      text: 'programer newbie | student'
-    })
-  </script>
-
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzwttBKbG0ISEOd1_hubp-P8mbaA0QRKztHD5PLxbMiiN7An06qAlgYQQLJAHJScPvYqA/exec'
-    const form = document.forms['submit-to-google-sheet'];
-    const btnKirim = document.querySelector('.btn-kirim');
-    const btnLoading = document.querySelector('.btn-loading');
-    const myAlert = document.querySelector('.my-alert');
-
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      //ketika tombol submit di klik
-      //tampilkan tombol loading. hilangkan tombol kirim
-      btnLoading.classList.toggle('d-none')
-      btnKirim.classList.toggle('d-none')
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          console.log('Success!', response)
-          //ketika tombol submit di klik
-          //tampilkan tombol kirim. hilangkan tombol loading
-          btnLoading.classList.toggle('d-none')
-          btnKirim.classList.toggle('d-none')
-          myAlert.classList.toggle('d-none')
-          form.reset();
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-  <script src="tilt.js"></script>
-  <script type="text/javascript">
-    VanillaTilt.init(document.querySelectorAll(".person-box"), {
-      max: 25,
-      speed: 400,
-      reverse: true,
-      glare: true
-    });
-
-    //It also supports NodeList
-  </script>
-</body>
-
-</html>
+  }
+}
+</script>
+</body></html>
