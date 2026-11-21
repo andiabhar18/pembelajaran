@@ -169,6 +169,21 @@ dialog{border:0;margin:0;padding:0;inset:0;width:100%;height:100%;max-width:none
 @media (prefers-reduced-motion: reduce) {
   .collage-video img { transition: none; }
 }
+
+.profile-details { margin-top: clamp(2rem, 5vw, 4rem); }
+.profile-details > h3 { margin-bottom: 1rem; font-size: clamp(1.55rem, 3vw, 2.35rem); }
+.profile-timeline { list-style: none; margin: 0; padding: 0; }
+.profile-timeline li {
+  display: grid;
+  grid-template-columns: minmax(8rem, .3fr) minmax(0, 1fr);
+  gap: .45rem 1.3rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+.profile-timeline time, .profile-timeline .date { color: var(--mint); font-size: .85rem; font-weight: 800; }
+.profile-timeline h3 { font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.3; }
+.profile-timeline p { margin-top: .28rem; color: var(--muted); }
+@media(max-width: 540px) { .profile-timeline li { grid-template-columns: minmax(0, 1fr); } }
 </style>
 </head>
 <body id="atas">
@@ -184,8 +199,18 @@ dialog{border:0;margin:0;padding:0;inset:0;width:100%;height:100%;max-width:none
 <figure class="hero-photo enter"><div><img src="abhar-arches.webp" alt="Andi Abhar berdiri di bawah lengkungan batu" fetchpriority="high" width="900" height="1600"></div><figcaption>Andi Abhar · Potret dari album pribadi</figcaption></figure>
 </section>
 <section class="section" id="tentang"><div class="wrap about">
-<div data-reveal><p class="eyebrow">Tentang saya</p><h2>Dari lapangan<br>ke layar.</h2><p class="muted">Saya mahasiswa Ilmu Hukum di UIN Alauddin Makassar dengan pengalaman sebagai reporter pers mahasiswa, dalam advokasi, dan dalam produksi konten digital. Peliputan dan wawancara melatih saya mencari sudut cerita serta menyusun informasi dengan jelas.</p><p class="muted">Saya terbiasa menggunakan kamera, drone, dan gimbal. Saya menyunting di CapCut Desktop dan terus mengasah komposisi, sudut pengambilan, serta gerak kamera.</p><div class="award"><strong>Juara I sebagai editor video</strong><br>Lomba Video Mars PTA Bali, tingkat Provinsi Bali.</div></div>
-<div class="skills" data-reveal><article class="skill"><h3>Videografi</h3><p>Pengambilan gambar dengan kamera, drone, dan gimbal.</p></article><article class="skill"><h3>Penyuntingan video</h3><p>Menyusun footage dan membangun ritme cerita di CapCut Desktop.</p></article><article class="skill"><h3>Jurnalistik</h3><p>Peliputan, wawancara, verifikasi informasi, dan penulisan berita.</p></article></div>
+<div data-reveal><p class="eyebrow">Profil</p><h2>Tentang saya.</h2><p class="muted">Saya mahasiswa Ilmu Hukum di UIN Alauddin Makassar dengan pengalaman sebagai reporter pers mahasiswa, dalam advokasi, dan dalam produksi konten digital. Peliputan dan wawancara melatih saya mencari sudut cerita serta menyusun informasi dengan jelas.</p><p class="muted">Saya terbiasa menggunakan kamera, drone, dan gimbal. Saya menyunting di CapCut Desktop dan terus mengasah komposisi, sudut pengambilan, serta gerak kamera.</p><div class="award"><strong>Juara I sebagai editor video</strong><br>Lomba Video Mars PTA Bali, tingkat Provinsi Bali.</div></div>
+<div class="skills" data-reveal><article class="skill"><h3>Videografi</h3><p>Pengambilan gambar dengan kamera, drone, dan gimbal.</p></article><article class="skill"><h3>Penyuntingan video</h3><p>Menyusun footage dan membangun ritme cerita di CapCut Desktop.</p></article><article class="skill"><h3>Jurnalistik &amp; riset</h3><p>Penggalian ide, peliputan, wawancara, verifikasi informasi, penulisan berita, dan riset hukum.</p></article></div>
+</div>
+<div class="wrap profile-details" id="pengalaman" data-reveal>
+<h3>Pengalaman &amp; pendidikan</h3>
+<ul class="profile-timeline">
+<li><time datetime="2026-08">Agustus 2026</time><div><h3>Magang · Pengadilan Agama Karangasem, Bali</h3></div></li>
+<li><time datetime="2026">2026</time><div><h3>Ketua Bidang Advokasi, Politik, Hukum &amp; HAM</h3><p>HMJ Ilmu Hukum. Mengelola kegiatan kajian hukum, advokasi mahasiswa, dan penguatan kesadaran politik serta HAM.</p></div></li>
+<li><span class="date">2025–2026</span><div><h3>Reporter · Pers Mahasiswa UKM LIMA Washilah</h3><p>Meliput kegiatan, mewawancarai narasumber, menulis berita, dan terlibat dalam kegiatan redaksi.</p></div></li>
+<li><span class="date">2024–2025</span><div><h3>Penyuluhan hukum</h3><p>Koordinator kegiatan penyuluhan di Kajang pada 2025. Terlibat dalam penyuluhan mengenai perlindungan ekosistem laut di Jeneponto pada 2024.</p></div></li>
+<li><span class="date">2023–sekarang</span><div><h3>Ilmu Hukum · UIN Alauddin Makassar</h3><p>Anggota UKM RITMA dengan keterlibatan dalam kegiatan riset mahasiswa dan kemitraan masyarakat.</p></div></li>
+</ul>
 </div></section>
 <section class="section" id="karya"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Portofolio video</p><h2>Karya visual.</h2></div><p class="muted">Pilih sampul untuk memutar video dalam layar penuh.</p></div><div class="video-collage">
 <button type="button" class="collage-video" data-tile="a" data-video="/reel-1.mp4" aria-label="Putar video pilihan"><img src="/reel-1.jpg" alt="" loading="lazy"><span class="collage-caption"><span class="collage-play" aria-hidden="true">▶</span><strong>Video pilihan</strong><time datetime="PT1M19S">1:19</time></span></button>
