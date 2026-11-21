@@ -388,13 +388,13 @@ body { isolation: isolate; }
 @media (min-width: 921px) {
   .wrap {
     width: min(1420px, calc(100% - 11.75rem));
-    margin-left: max(9.85rem, calc((100% - 1578px) / 2 + 9.85rem));
-    margin-right: auto;
+    margin-left: auto;
+    margin-right: max(9.85rem, calc((100% - 1578px) / 2 + 9.85rem));
   }
   .nav-stack {
     position: fixed;
     top: 50%;
-    left: max(.8rem, calc((100vw - 1578px) / 2 + .8rem));
+    right: max(.8rem, calc((100vw - 1578px) / 2 + .8rem));
     z-index: 5;
     transform: translateY(-50%);
     display: grid;
@@ -445,15 +445,16 @@ body { isolation: isolate; }
 <a class="skip" href="#konten">Lewati ke konten</a>
 <header class="top"><div class="wrap nav">
 <a class="brand" href="#atas">Andi Abhar<span>.</span></a>
-<div class="nav-stack"><nav class="section-dock" aria-label="Navigasi utama">
+<div class="nav-stack">
+<a class="pill outline header-contact" href="#kontak">Hubungi saya</a>
+<nav class="section-dock" aria-label="Navigasi utama">
 <a href="#atas" aria-current="location"><span class="dock-icon" aria-hidden="true">⌂</span><span>Awal</span></a>
 <a href="#tentang"><span class="dock-icon" aria-hidden="true">◎</span><span>Tentang</span></a>
 <a href="#karya"><span class="dock-icon" aria-hidden="true">▷</span><span>Video</span></a>
 <a href="#washilah"><span class="dock-icon" aria-hidden="true">≡</span><span>Tulisan</span></a>
 <a href="#galeri"><span class="dock-icon" aria-hidden="true">▧</span><span>Foto</span></a>
 <a href="#kontak"><span class="dock-icon" aria-hidden="true">✉</span><span>Kontak</span></a>
-</nav>
-<a class="pill outline header-contact" href="#kontak">Hubungi saya</a></div>
+</nav></div>
 </div></header>
 <main id="konten">
 <section class="hero wrap" aria-label="Profil Andi Abhar">
