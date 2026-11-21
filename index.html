@@ -149,7 +149,7 @@ dialog{border:0;margin:0;padding:0;inset:0;width:100%;height:100%;max-width:none
 }
 .platform-links a:hover { border-color: var(--mint, var(--green)); }
 .platform-logo { flex: 0 0 auto; width: 1.2rem; height: 1.2rem; }
-@media (max-width: 900px) {
+@media (max-width: 920px) {
   .video-collage {
     grid-template-columns: repeat(2,minmax(0,1fr));
     grid-template-areas: "a a" "d e" "b c" "f f";
@@ -349,15 +349,28 @@ body { isolation: isolate; }
   box-shadow: inset 0 1px 0 #fff1e642;
   pointer-events: none;
 }
-.collage-video::after { opacity: 0; transition: opacity .2s ease; }
-.collage-caption { pointer-events: none; }
-.collage-caption strong, .collage-caption time { opacity: 0; transition: opacity .2s ease; }
+
+/* Thumbnail and playback details occupy separate rows within each card. */
+.collage-video {
+  grid-template-rows: minmax(0, 1fr) auto;
+  align-items: stretch;
+  background: #201b24;
+}
+.collage-video::after { content: none; }
+.collage-thumb { position: relative; display: block; min-height: 0; min-width: 0; overflow: hidden; }
+.collage-video .collage-thumb img { inset: 0; z-index: auto; }
+.collage-caption {
+  position: relative;
+  align-self: stretch;
+  min-height: 3.25rem;
+  padding: .65rem .75rem;
+  border-top: 1px solid #ffefda29;
+  background: linear-gradient(110deg, #2b2331, #1c1921);
+}
+.collage-caption strong, .collage-caption time { opacity: 1; }
 .collage-play {
-  position: absolute;
-  left: .62rem;
-  bottom: .62rem;
-  width: clamp(1.85rem, 3.2vw, 2.4rem);
-  height: clamp(1.85rem, 3.2vw, 2.4rem);
+  width: 1.9rem;
+  height: 1.9rem;
   padding: 0;
   box-shadow: 0 2px 12px #0b090e5e;
 }
@@ -370,50 +383,60 @@ body { isolation: isolate; }
   border-top: .31rem solid transparent;
   border-bottom: .31rem solid transparent;
 }
-.collage-caption { min-height: 3.7rem; padding: .6rem .7rem .65rem clamp(2.85rem, 4.7vw, 3.5rem); }
-.collage-video:focus-visible::after { opacity: 1; }
-.collage-video:focus-visible .collage-caption strong,
-.collage-video:focus-visible .collage-caption time { opacity: 1; }
-@media (hover: hover) {
-  .collage-video:hover::after { opacity: 1; }
-  .collage-video:hover .collage-caption strong,
-  .collage-video:hover .collage-caption time { opacity: 1; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .collage-video::after, .collage-caption strong, .collage-caption time { transition: none; }
-}
+.nav-stack { display: contents; }
+.skip { z-index: 7; }
 @media (min-width: 921px) {
-  .wrap { width: min(1200px, calc(100% - 3rem)); margin-inline: auto; }
-  .top { position: sticky; top: 0; z-index: 5; backdrop-filter: blur(16px); }
-  .nav { gap: 1.05rem; }
+  .wrap {
+    width: min(1420px, calc(100% - 11.75rem));
+    margin-left: max(9.85rem, calc((100% - 1578px) / 2 + 9.85rem));
+    margin-right: auto;
+  }
+  .nav-stack {
+    position: fixed;
+    top: 50%;
+    left: max(.8rem, calc((100vw - 1578px) / 2 + .8rem));
+    z-index: 5;
+    transform: translateY(-50%);
+    display: grid;
+    gap: .7rem;
+    width: 7.85rem;
+  }
   .section-dock {
     position: static;
     transform: none;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(.2rem, 1vw, .75rem);
-    padding: .3rem;
-    border-radius: 999px;
+    width: 100%;
+    padding: .35rem;
+    gap: .2rem;
   }
   .section-dock a {
-    grid-template-columns: 1.15rem auto;
-    gap: .35rem;
     min-height: 2.6rem;
-    padding: .5rem clamp(.52rem, 1vw, .85rem);
-    font-size: .9rem;
-    border-radius: 999px;
+    padding-inline: .5rem;
+    font-size: .83rem;
   }
-  .dock-icon { font-size: 1.02rem; }
-  .header-contact {
-    flex: 0 0 auto;
+  .nav-stack .header-contact {
+    width: 100%;
+    min-height: 2.8rem;
+    padding: .5rem .3rem;
+    font-size: .83rem;
+    background: #241d17d9;
     white-space: nowrap;
-    min-height: 3.2rem;
-    padding-inline: clamp(.82rem, 1.6vw, 1.35rem);
-    font-size: .92rem;
   }
-  .section { scroll-margin-top: 6.2rem; }
+  .nav-stack .header-contact:hover { background: var(--accent-soft); }
+  .video-collage {
+    grid-template-columns: 2fr 1.13fr 1.13fr 1.83fr;
+    aspect-ratio: 2.21;
+    min-height: 28rem;
+  }
+}
+@media (max-width: 720px) {
+  .video-collage {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "a" "b" "c" "d" "e" "f";
+    gap: .85rem;
+  }
+  .collage-video, .collage-video.is-portrait { aspect-ratio: auto; }
+  .collage-thumb { aspect-ratio: 16/9; }
+  .is-portrait .collage-thumb { aspect-ratio: 9/16; }
 }
 </style>
 </head>
@@ -422,7 +445,7 @@ body { isolation: isolate; }
 <a class="skip" href="#konten">Lewati ke konten</a>
 <header class="top"><div class="wrap nav">
 <a class="brand" href="#atas">Andi Abhar<span>.</span></a>
-<nav class="section-dock" aria-label="Navigasi utama">
+<div class="nav-stack"><nav class="section-dock" aria-label="Navigasi utama">
 <a href="#atas" aria-current="location"><span class="dock-icon" aria-hidden="true">⌂</span><span>Awal</span></a>
 <a href="#tentang"><span class="dock-icon" aria-hidden="true">◎</span><span>Tentang</span></a>
 <a href="#karya"><span class="dock-icon" aria-hidden="true">▷</span><span>Video</span></a>
@@ -430,7 +453,7 @@ body { isolation: isolate; }
 <a href="#galeri"><span class="dock-icon" aria-hidden="true">▧</span><span>Foto</span></a>
 <a href="#kontak"><span class="dock-icon" aria-hidden="true">✉</span><span>Kontak</span></a>
 </nav>
-<a class="pill outline header-contact" href="#kontak">Hubungi saya</a>
+<a class="pill outline header-contact" href="#kontak">Hubungi saya</a></div>
 </div></header>
 <main id="konten">
 <section class="hero wrap" aria-label="Profil Andi Abhar">
@@ -451,13 +474,13 @@ body { isolation: isolate; }
 <li><span class="date">2023–sekarang</span><div><h3>Ilmu Hukum · UIN Alauddin Makassar</h3><p>Anggota UKM RITMA dengan keterlibatan dalam kegiatan riset mahasiswa dan kemitraan masyarakat.</p></div></li>
 </ul>
 </div></section>
-<section class="section" id="karya"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Portofolio video</p><h2>Karya visual.</h2></div><p class="muted">Pilih sampul untuk memutar video dalam layar penuh.</p></div><div class="video-collage">
-<button type="button" class="collage-video" data-tile="a" data-video="/reel-1.mp4" aria-label="Putar video pilihan"><img src="/reel-1.jpg" alt="" loading="lazy"><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video pilihan</strong><time datetime="PT1M19S">1:19</time></span></button>
-<button type="button" class="collage-video is-portrait" data-tile="d" data-video="/reel-4.mp4" aria-label="Putar video 4"><img src="/reel-4.jpg" alt="" loading="lazy"><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 4</strong><time datetime="PT27S">0:27</time></span></button>
-<button type="button" class="collage-video is-portrait" data-tile="e" data-video="/reel-5.mp4" aria-label="Putar video 5"><img src="/reel-5.jpg" alt="" loading="lazy"><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 5</strong><time datetime="PT10S">0:10</time></span></button>
-<button type="button" class="collage-video" data-tile="b" data-video="/reel-2.mp4" aria-label="Putar video 2"><img src="/reel-2.jpg" alt="" loading="lazy"><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 2</strong><time datetime="PT30S">0:30</time></span></button>
-<button type="button" class="collage-video" data-tile="c" data-video="/reel-3.mp4" aria-label="Putar video 3"><img src="/reel-3.jpg" alt="" loading="lazy"><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 3</strong><time datetime="PT1M15S">1:15</time></span></button>
-<button type="button" class="collage-video" data-tile="f" data-video="/reel-6.mp4" aria-label="Putar video 6"><img src="/reel-6.jpg" alt="" loading="lazy"><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 6</strong><time datetime="PT20S">0:20</time></span></button>
+<section class="section" id="karya"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Portofolio video</p><h2>Karya visual.</h2></div><p class="muted">Pilih kartu untuk memutar video dalam layar penuh.</p></div><div class="video-collage">
+<button type="button" class="collage-video" data-tile="a" data-video="/reel-1.mp4" aria-label="Putar video pilihan"><span class="collage-thumb"><img src="/reel-1.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video pilihan</strong><time datetime="PT1M19S">1:19</time></span></button>
+<button type="button" class="collage-video" data-tile="b" data-video="/reel-2.mp4" aria-label="Putar video 2"><span class="collage-thumb"><img src="/reel-2.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 2</strong><time datetime="PT30S">0:30</time></span></button>
+<button type="button" class="collage-video" data-tile="c" data-video="/reel-3.mp4" aria-label="Putar video 3"><span class="collage-thumb"><img src="/reel-3.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 3</strong><time datetime="PT1M15S">1:15</time></span></button>
+<button type="button" class="collage-video is-portrait" data-tile="d" data-video="/reel-4.mp4" aria-label="Putar video 4"><span class="collage-thumb"><img src="/reel-4.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 4</strong><time datetime="PT27S">0:27</time></span></button>
+<button type="button" class="collage-video is-portrait" data-tile="e" data-video="/reel-5.mp4" aria-label="Putar video 5"><span class="collage-thumb"><img src="/reel-5.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 5</strong><time datetime="PT10S">0:10</time></span></button>
+<button type="button" class="collage-video" data-tile="f" data-video="/reel-6.mp4" aria-label="Putar video 6"><span class="collage-thumb"><img src="/reel-6.jpg" alt="" loading="lazy"></span><span class="collage-caption"><span class="collage-play" aria-hidden="true"></span><strong>Video 6</strong><time datetime="PT20S">0:20</time></span></button>
 </div>
 </div></section>
 <section class="section" id="washilah"><div class="wrap"><div class="section-head"><div><p class="eyebrow">Pers Mahasiswa UKM LIMA</p><h2>Tulisan di Washilah.</h2></div><p class="muted">Pilihan berita kampus, liputan cek fakta, dan opini pendidikan.</p></div><div class="stories">
